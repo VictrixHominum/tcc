@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Button, TextInput, StyleSheet } from 'react-native';
-import Auth from 'aws-amplify';
+import { Amplify } from 'aws-amplify';
+import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
 
 const SignInScreen = ({ onSignIn }) => {
   const [username, setUsername] = useState('');

@@ -1,3 +1,5 @@
+import 'react-native-url-polyfill/auto';
+import 'react-native-get-random-values';
 import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import Home from './app/screens/Home';
