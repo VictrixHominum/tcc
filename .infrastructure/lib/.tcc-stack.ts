@@ -13,6 +13,7 @@ export class TccStack extends cdk.Stack {
     // const queue = new sqs.Queue(this, 'TccQueue', {
     //   visibilityTimeout: cdk.Duration.seconds(300)
     // });
+    this.createUserPool();
   }
 
   createUserPool(): void {
