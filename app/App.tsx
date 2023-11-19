@@ -1,8 +1,9 @@
-import 'react-native-url-polyfill/auto';
-import 'react-native-get-random-values';
 import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import Home from './screens/Home';
+import CalendarPage from './screens/Calendar';
+import BalancePage from './screens/Balance';
+import AccountPage from './screens/Account';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import mainStyle from './style/mainStyle';
@@ -33,7 +34,9 @@ function App() {
     <NavigationContainer>
       <Tab.Navigator initialRouteName="Home" screenOptions={{headerStyle: mainStyle.header, headerTintColor: 'white', headerTitleStyle: mainStyle.headerTitleStyle}}>
         <Tab.Screen name="Home" component={Home} options={{title: 'The Club'}} />
-        <Tab.Screen name="Details" component={DetailsScreen}/>
+        <Tab.Screen name="Calendar" component={CalendarPage}/>
+        <Tab.Screen name="My Balance" component={BalancePage}/>
+        <Tab.Screen name="My Account" component={AccountPage}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

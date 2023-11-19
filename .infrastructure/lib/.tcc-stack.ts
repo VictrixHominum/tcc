@@ -20,5 +20,12 @@ export class TccStack extends cdk.Stack {
     const userPool = new UserPool(this, 'TccUserPool', {
       userPoolName: 'tcc-user-pool',
     });
+
+    userPool.addClient('TccUserPoolClient', {
+      userPoolClientName: 'tcc-user-pool-client',
+      authFlows: {
+        userPassword: true,
+      }
+    });
   }
 }
