@@ -2,7 +2,7 @@ import 'react-native-url-polyfill/auto';
 import 'react-native-get-random-values';
 import * as React from 'react';
 import { View, Text, Button } from 'react-native';
-import Home from './app/screens/Home';
+import Home from './screens/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import mainStyle from './style/mainStyle';

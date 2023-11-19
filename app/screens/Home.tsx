@@ -1,5 +1,5 @@
 import { ImageBackground, ScrollView, Text, View } from 'react-native';
-import mainStyle from '../../style/mainStyle';
+import mainStyle from '../style/mainStyle';
 import * as React from 'react';
 
 function getStatusText() {
@@ -31,7 +31,7 @@ function getStatusText() {
 export default function Home() {
   return (
     <ScrollView style={ [mainStyle.view] }>
-      <ImageBackground style={{width: '100%', flex: 1, justifyContent: 'center',alignItems: 'center', height: 200}} source={require("./../../assets/club_entrance.png")}>
+      <ImageBackground style={{width: '100%', flex: 1, justifyContent: 'center',alignItems: 'center', height: 200}} source={require("../assets/club_entrance.png")}>
         <Text style={[mainStyle.coverText]}>The County Club</Text>
         <Text style={[mainStyle.coverText, {fontSize: 32}]}>Since 1882</Text>
       </ImageBackground>
