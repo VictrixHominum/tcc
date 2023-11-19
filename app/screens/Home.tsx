@@ -28,7 +28,7 @@ function getStatusText() {
 }
 
 // @ts-ignore
-export default function HomeScreen() {
+export default function Home() {
   return (
     <ScrollView style={ [mainStyle.view] }>
       <ImageBackground style={{width: '100%', flex: 1, justifyContent: 'center',alignItems: 'center', height: 200}} source={require("./../../assets/club_entrance.png")}>

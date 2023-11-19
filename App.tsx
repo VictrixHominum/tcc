@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, Button } from 'react-native';
-import HomeScreen from './app/components/HomeScreen';
+import Home from './app/screens/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import mainStyle from './style/mainStyle';
@@ -30,7 +30,7 @@ function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator initialRouteName="Home" screenOptions={{headerStyle: mainStyle.header, headerTintColor: 'white', headerTitleStyle: mainStyle.headerTitleStyle}}>
-        <Tab.Screen name="Home" component={HomeScreen} options={{title: 'The Club'}} />
+        <Tab.Screen name="Home" component={Home} options={{title: 'The Club'}} />
         <Tab.Screen name="Details" component={DetailsScreen}/>
       </Tab.Navigator>
     </NavigationContainer>
