@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
+import * as React from 'react';
+import { View, Text, Button } from 'react-native';
+import HomeScreen from './app/components/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import mainStyle from './style/mainStyle';
+// @ts-ignore
+function DetailsScreen({ route, navigation }) {
+  /* 2. Get the param */
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={mainStyle.view}>
+      <Text style={ mainStyle.text }>Details Screen</Text>
+      <Button
+        title="Go to Details... again"
+        onPress={() =>
+          navigation.push('Details', {
+            itemId: Math.floor(Math.random() * 100),
+          })
+        }
+      />
+      <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+const Tab = createBottomTabNavigator();
+// @ts-ignore
+function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator initialRouteName="Home" screenOptions={{headerStyle: mainStyle.header, headerTintColor: 'white', headerTitleStyle: mainStyle.headerTitleStyle}}>
+        <Tab.Screen name="Home" component={HomeScreen} options={{title: 'The Club'}} />
+        <Tab.Screen name="Details" component={DetailsScreen}/>
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
