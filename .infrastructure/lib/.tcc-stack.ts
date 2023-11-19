@@ -1,4 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
+import { StringAttribute, UserPool } from 'aws-cdk-lib/aws-cognito';
 import { Construct } from 'constructs';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
@@ -12,5 +13,11 @@ export class TccStack extends cdk.Stack {
     // const queue = new sqs.Queue(this, 'TccQueue', {
     //   visibilityTimeout: cdk.Duration.seconds(300)
     // });
+  }
+
+  createUserPool(): void {
+    const userPool = new UserPool(this, 'TccUserPool', {
+      userPoolName: 'tcc-user-pool',
+    });
   }
 }
