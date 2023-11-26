@@ -3,6 +3,7 @@ import { View, Button, TextInput, StyleSheet } from 'react-native';
 import signInStyle from '../style/signInStyle';
 import { Image } from 'expo-image';
 import { StatusBar } from 'expo-status-bar';
+import { Member } from '../types/Member';
 
 // @ts-ignore
 const SignInScreen = ({ onSignIn }) => {
@@ -12,7 +13,15 @@ const SignInScreen = ({ onSignIn }) => {
   const logIn = async () => {
     try {
       console.log('Sign in success!');
-      onSignIn();
+      const member = new Member({
+        id: 1,
+        prefix: 'Mr',
+        firstName: 'Joseph',
+        lastName: 'Hollingworth',
+        membershipNumber: '9999',
+        email: 'jchhollingworth97@gmail.com'
+      });
+      onSignIn(member);
     } catch (error) {
       console.log('Error signing in...', error);
     }

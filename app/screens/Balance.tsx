@@ -1,13 +1,24 @@
-import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Member } from '../types/Member';
 import { MembershipCard } from '../components/membershipCard';
+import React from 'react';
+import MainStyle from '../style/mainStyle';
 
-const BalancePage = () => {
+
+// @ts-ignore
+const BalancePage= ({ route }) => {
+  const member: Member = route.params.member;
+  const name = `${member.prefix} ${member.firstName} ${member.lastName}`;
+  const membershipNumber = member.membershipNumber;
   // Balance display and top-up logic here
   return (
     <View style={styles.container}>
-      <MembershipCard memberName='Mr Joseph Hollingworth' memberNumber='9999'/>
-      {/* Implement balance and top-up functionality */}
+      <View style={{alignItems: 'center', flex:0.5}}>
+        <MembershipCard memberName={name} memberNumber={membershipNumber}/>
+      </View>
+      <View style={styles.container}>
+        <View style={MainStyle.divider}></View>
+      </View>
     </View>
   );
 };
@@ -16,7 +27,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 

@@ -59,5 +59,17 @@ export default StyleSheet.create({
     color: '#A7882E',
     fontSize: 16,
     alignSelf: 'flex-end'
+  },
+  divider: {
+    justifyContent: 'flex-start',
+    width: 300,
+    height: 1,
+    borderBottomColor: '#A7882E',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    shadowColor: 'black',
+    shadowOpacity: 0.8,
+    shadowOffset: { width: 0, height: 0.1 },
+    shadowRadius: 0.1,
+    elevation: 2,
   }
 });
