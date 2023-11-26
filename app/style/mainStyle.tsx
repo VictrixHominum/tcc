@@ -55,6 +55,17 @@ export default StyleSheet.create({
     color: '#A7882E',
     fontSize: 24,
   },
+  cardBalance: {
+    color: '#A7882E',
+    fontSize: 24,
+    paddingBottom: 20,
+  },
+  cardHistory: {
+    color: '#A7882E',
+    fontSize: 24,
+    alignSelf: 'flex-start',
+    marginLeft: 20,
+  },
   cardMember: {
     color: '#A7882E',
     fontSize: 16,
