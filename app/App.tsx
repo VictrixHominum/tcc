@@ -52,7 +52,8 @@ function App() {
           ),
         }}
         />
-        <Tab.Screen name="Calendar" component={CalendarPage} options={{
+        <Tab.Screen name="Club Calendar" component={CalendarPage} options={{
+          title: 'Calendar',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="calendar-month" color={color} size={size} />
           ),
