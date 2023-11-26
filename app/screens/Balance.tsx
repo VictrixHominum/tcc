@@ -6,7 +6,7 @@ const BalancePage = () => {
   // Balance display and top-up logic here
   return (
     <View style={styles.container}>
-      <MembershipCard />
+      <MembershipCard memberName='Mr Joseph Hollingworth' memberNumber='9999'/>
       {/* Implement balance and top-up functionality */}
     </View>
   );
