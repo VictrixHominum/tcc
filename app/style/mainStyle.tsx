@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   view: {
     flex: 1, backgroundColor: '#22382C'
   },
@@ -29,4 +32,32 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     color: 'white'
   },
+  memberCardContainer: {
+    borderWidth: 1,
+    shadowColor: 'black',
+    shadowOpacity: 0.8,
+    shadowOffset: { width: 0, height: 1 },
+    shadowRadius: 5,
+    elevation: 5,
+    borderRadius: 15,
+    padding: 10,
+    margin: 10,
+    width: 360,
+    height: 200,
+    backgroundColor: '#22382C',
+  },
+  cardImage: {
+    width: 125,
+    height: 125,
+    alignSelf: 'center',
+  },
+  cardName: {
+    color: '#A7882E',
+    fontSize: 24,
+  },
+  cardMember: {
+    color: '#A7882E',
+    fontSize: 16,
+    alignSelf: 'flex-end'
+  }
 });
