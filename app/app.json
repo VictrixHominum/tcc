@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/tcc_logo_background.png",
+      "image": "./assets/tcc_logo.png",
       "backgroundColor": "#22382C"
     },
     "assetBundlePatterns": [
