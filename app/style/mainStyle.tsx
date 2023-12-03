@@ -34,7 +34,7 @@ export default StyleSheet.create({
   },
   headerTitleStyle: {
     fontWeight: 'bold',
-    color: 'white'
+    color: '#A7882E'
   },
   memberCardContainer: {
     borderWidth: 1,

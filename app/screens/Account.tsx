@@ -14,7 +14,7 @@ const AccountPage = ({ route, navigation } ) => {
   // Account management logic here
   return (
     <View style={styles.container}>
-      <View style={{flex: 1, alignItems: 'center', marginTop: 15}}>
+      <View style={{flex: 1, alignItems: 'center', marginTop: 75}}>
         <ProfilePhoto/>
         <Text style={MainStyle.cardName}>{name}</Text>
         <Text style={[MainStyle.cardMember, {alignSelf: 'center'}]}>Member: {membershipNumber}</Text>
