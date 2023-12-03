@@ -10,6 +10,7 @@ import mainStyle from './style/mainStyle';
 import SignInScreen from './screens/SignIn';
 import { StatusBar } from 'expo-status-bar';
 import { Member } from './types/Member';
+import AccountStackNavigator from './navigators/AccountStackNavigator';
 
 
 const Tab = createBottomTabNavigator();
@@ -73,7 +74,7 @@ function App() {
         }}
           initialParams={{ member: member }}
         />
-        <Tab.Screen name="My Account" component={AccountPage} options={{
+        <Tab.Screen name="My Account" component={AccountStackNavigator} options={{
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account-cog-outline" color={color} size={size} />
           ),
