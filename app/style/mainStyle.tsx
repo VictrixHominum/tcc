@@ -7,6 +7,7 @@ export default StyleSheet.create({
   colors: {
     backgroundColor: '#22382C',
     secondary: '#A7882E',
+    secondaryFaded: 'rgba(167,136,46,0.33)'
   },
   view: {
     flex: 1, backgroundColor: '#22382C'

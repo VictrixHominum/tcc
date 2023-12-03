@@ -35,7 +35,7 @@ export type MemberType = {
   addressLine1?: string;
   addressLine2?: string;
   city?: string;
-  postCode?: string;
+  postcode?: string;
   bookings?: Booking[];
 }
 
@@ -52,7 +52,7 @@ export class Member implements MemberType {
   addressLine1?: string;
   addressLine2?: string;
   city?: string;
-  postCode?: string;
+  postcode?: string;
   bookings?: Booking[];
 
   constructor(member: MemberType) {
@@ -68,7 +68,7 @@ export class Member implements MemberType {
     this.addressLine1 = member.addressLine1;
     this.addressLine2 = member.addressLine2;
     this.city = member.city;
-    this.postCode = member.postCode;
+    this.postcode = member.postcode;
     this.bookings = member.bookings;
   }
 }

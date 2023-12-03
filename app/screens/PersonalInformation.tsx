@@ -1,22 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import MemberEditComponent from '../components/MemberEditComponent';
+import { View } from 'react-native';
+import MainStyle from '../style/mainStyle';
 
-const PersonalInformation = () => {
-  // Account management logic here
+// @ts-ignore
+const PersonalInformation = ({ route }) => {
   return (
-    <View style={styles.container}>
-      <Text>Personal Information Page</Text>
-      {/* Implement account management functionality */}
+    <View style={{backgroundColor: MainStyle.colors.backgroundColor, flex: 1}}>
+      <MemberEditComponent member={route.params} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default PersonalInformation;
