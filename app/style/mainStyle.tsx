@@ -4,6 +4,10 @@ export default StyleSheet.create({
   container: {
     flex: 1,
   },
+  colors: {
+    backgroundColor: '#22382C',
+    secondary: '#A7882E',
+  },
   view: {
     flex: 1, backgroundColor: '#22382C'
   },
@@ -65,6 +69,7 @@ export default StyleSheet.create({
     fontSize: 24,
     alignSelf: 'flex-start',
     marginLeft: 20,
+    paddingBottom: 5,
   },
   cardMember: {
     color: '#A7882E',
